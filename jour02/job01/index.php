@@ -4,17 +4,18 @@
 //     echo  "$ch <br/>";
 // }
 
-$i = 0;
+$i = 1;
+
 
 while ($i < 1337) {
 
+    echo "$i <br/>";
     
-    
-    if ($i == 42){
-    echo "<b> <u> $i </u> </b> <br/>";
-    } else {
-        echo "$i <br/>";
-    }
+    switch ($i){
+        case 26:
+            echo $i;
+            break;
+    } 
     $i++;
 
     
