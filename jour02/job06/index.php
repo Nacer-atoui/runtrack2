@@ -1,44 +1,42 @@
-<?php 
+<?php
+echo "<pre>";
+$largeur = 20;
+$hauteur = 10;
 
-for($i = 0; $i < 10; $i++){
+for ($y = 1; $y <= $hauteur; $y++) {
     
-    echo "* ";
-    
+
+    for ($x = 1; $x <= $largeur; $x++) {
+        // echo "*";
+        // echo "&nbsp";
+        // echo str_repeat("&nbsp &nbsp", 9);
+        if ($x == 1 || $x == $largeur) {
+            echo "*"; //echo "|";
+        }
+
+        else {
+            echo "&nbsp";
+        }
+
+        if ($y == 1 && $x < $largeur || $y == $hauteur && $x < $largeur){
+            echo "*"; //echo "-";
+        }
+        else {
+            echo "&nbsp";
+        }
+
+    }
+
+echo "<br/>";
+
 }
-    
-for($i = 0; $i < 20 ; $i++){
-echo "* ";
 
-echo str_repeat("&nbsp &nbsp", 9);
-echo "*<br/>";
+echo "</pre>";
+// echo "*<br/>";
 
 
-
-}
-
-for($i = 0; $i <= 10 ; $i++){
-    echo "* ";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+// for($i = 0; $i <= $largeur ; $i++){
+//     echo "* ";
+// }
 
 ?>
