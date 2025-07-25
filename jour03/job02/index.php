@@ -7,6 +7,7 @@ $i = 0;
 while ($i < 76) {
 
     echo $str[$i];
+    
      $i = $i + 2;
 
 }
