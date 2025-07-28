@@ -3,11 +3,13 @@
 $str = "Dans l'espace, personne ne vous entend crier";
 
 function countCarac($str){
-$i = 0;
-while (isset($str[$i])){
-    $i++;
-}
-return $i;
+    $i = 0;
+
+    while (isset($str[$i])){
+        $i++;
+    }
+
+    return $i;
 }
 
 $result = countCarac($str);
