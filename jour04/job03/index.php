@@ -5,7 +5,7 @@ $argument = array('mail', 'pseudo');
 
 
 foreach ($argument as $arguments){
-  if (isset($_GET[$arguments]) && $_GET[$arguments] <> ""){
+  if (isset($_POST[$arguments]) && $_POST[$arguments] <> ""){
     $nb_argument++;
 
   }
@@ -13,8 +13,8 @@ foreach ($argument as $arguments){
   echo "le nombre d'arguments envoyé est :" . $nb_argument;
 
 
-//     $mail = trim($_GET['mail']);
-//     $pseudo = trim($_GET['pseudo']);
+//     $mail = trim($_POST['mail']);
+//     $pseudo = trim($_POST['pseudo']);
 // if (!empty($mail) && !empty($pseudo)){
 //     echo "Le nombre d’argument POST envoyé est : 2";
 // }
@@ -25,19 +25,21 @@ foreach ($argument as $arguments){
 //     echo "Le nombre d’argument POST envoyé est : 0";
 // }
 
+
+
+
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
-    <form action="" method="GET">
+    <form action="" method="POST">
         <label for="mail">E-mail :</label>
         <input type="e-mail" name="mail" id="mail"/><br/><br/>
         <label for="pseudo">Pseudo</label>

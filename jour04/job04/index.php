@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="index.php" method="POST">
+    <form action="index.php" method="GET">
         <label for="Nom">Nom</label>
         <input type="text" name="Nom" id="name">
         <label for="Prénom">Prénom</label>
@@ -24,7 +24,7 @@
             <th>Valeur</th>
         </thead>
         <tbody>
-            <?php foreach($_POST as $key => $value): ?> 
+            <?php foreach($_GET as $key => $value): ?> 
              <tr>
                 <td><?php echo $key ?> </td>
                 <td> <?php echo $value; ?></td>
