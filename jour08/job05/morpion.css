@@ -1,0 +1,57 @@
+table{
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border-collapse: collapse;
+}
+
+td, th {
+    width: 10em;
+    height: 10em;
+}
+td {
+    text-align: center;
+}
+
+.btn_jeu {
+    width: 10em;
+    height: 10em;
+    background-color: cadetblue;
+}
+
+.btn_reset {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    display: flex;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.msg {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.jeu {
+    color: black;
+    font-size: xx-large;
+}
+
+.btn_reset:hover {
+    background-color: cadetblue;
+}
+
+.btn_jeu:hover {
+    background-color: antiquewhite;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: cadetblue;
+    text-align: center;
+}
