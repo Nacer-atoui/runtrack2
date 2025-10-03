@@ -156,6 +156,6 @@ SELECT * FROM etudiants
 WHERE prenom LIKE 'T%';
 
 SELECT * FROM etudiants
-WHERE age > 18;
+WHERE TIMESTAMPDIFF(YEAR, naissance, CURDATE()) > 18;
 
 

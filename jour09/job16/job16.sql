@@ -186,8 +186,6 @@ FROM salles
 INNER JOIN etage
 ON salles.id_etage = etage.id;
 
-
-
 SELECT etage.nom, salles.nom AS "Biggest Room", salles.capacite
 FROM salles INNER JOIN etage
 ON salles.id_etage = etage.id
