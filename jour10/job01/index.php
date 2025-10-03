@@ -41,5 +41,22 @@
         </tbody>
 
     </table>
+    <style>
+        table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    background-color: #a6c1efff;
+    
+}
+    </style>
 </body>
 </html>
