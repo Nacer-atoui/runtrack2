@@ -3,8 +3,7 @@
     $pdo = new PDO("mysql:host=localhost;dbname=jour09;charset=utf8", "root", "");
 
     //requete pour importer les données de ma table de données
-    $requete = $pdo->query("SELECT SUM(capacite) AS capacite_totale
-FROM salles;");
+    $requete = $pdo->query("SELECT nom, id_etage, capacite FROM salles ORDER BY capacite DESC;");
 
     $salles = $requete->fetchAll(PDO::FETCH_ASSOC);
 
@@ -15,22 +14,25 @@ FROM salles;");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jour 10 job07</title>
+    <title>Jour 10 job09</title>
 </head>
 <body>
     <table border="1px solid black">
         <thead>
             <tr>
 
-                <th>Capacité totale des salles</th>
+                <th>Nom</th>
+                <th>ID etage</th>
+                <th>Capacité</th>
                 
             </tr>
         </thead>
         <tbody>
             <?php foreach ($salles as $salle): ?>
             <tr>
-                <td><?= htmlspecialchars($salle['capacite_totale']) ?></td>
-                
+                <td><?= htmlspecialchars($salle['nom']) ?></td>
+                <td><?= htmlspecialchars($salle['id_etage']) ?></td>
+                <td><?= htmlspecialchars($salle['capacite']) ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
