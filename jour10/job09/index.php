@@ -15,7 +15,7 @@ FROM salles;");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jour 10 job08</title>
+    <title>Jour 10 job07</title>
 </head>
 <body>
     <table border="1px solid black">
