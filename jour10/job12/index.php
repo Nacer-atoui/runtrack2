@@ -3,9 +3,9 @@
     $pdo = new PDO("mysql:host=localhost;dbname=jour09;charset=utf8", "root", "");
 
     //requete pour importer les données de ma table de données
-    $requete = $pdo->query("SELECT AVG(capacite) AS capacite_moyenne FROM salles;");
+    $requete = $pdo->query("SELECT prenom, nom, naissance FROM etudiants WHERE naissance BETWEEN '1998-01-01' AND '2018-01-01';");
 
-    $salles = $requete->fetchAll(PDO::FETCH_ASSOC);
+    $etudiants = $requete->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -14,22 +14,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jour 10 job11</title>
+    <title>Jour 10 job12</title>
 </head>
 <body>
     <table border="1px solid black">
         <thead>
             <tr>
 
-                <th>Capacité moyenne des salles</th>
-                
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Naissance</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($salles as $salle): ?>
+            <?php foreach ($etudiants as $etudiant): ?>
             <tr>
-                <td><?= htmlspecialchars($salle['capacite_moyenne']) ?></td>
-                
+                <td><?= htmlspecialchars($etudiant['prenom']) ?></td>
+                <td><?= htmlspecialchars($etudiant['nom']) ?></td>
+                <td><?= htmlspecialchars($etudiant['naissance']) ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
