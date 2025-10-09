@@ -10,7 +10,7 @@ if (isset($_POST['reset'])){
     exit;
 }
 
-setcookie('nbvisites', $_COOKIE['nbvisites']+1);
+setcookie('nbvisites', value: $_COOKIE['nbvisites']+1);
 
 
 ?>

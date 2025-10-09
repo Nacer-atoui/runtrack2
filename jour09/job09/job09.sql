@@ -156,13 +156,13 @@ SELECT * FROM etudiants
 WHERE prenom LIKE 'T%';
 
 SELECT * FROM etudiants
-WHERE age > 18;
+WHERE TIMESTAMPDIFF(YEAR, naissance, CURDATE()) > 18;
 
 SELECT COUNT(*) AS nb_etudiants
 FROM etudiants;
 
 SELECT * FROM etudiants
-WHERE age < 18;
+WHERE TIMESTAMPDIFF(YEAR, naissance, CURDATE()) < 18;
 
 
 
